@@ -1,0 +1,20 @@
+name: commands
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+jobs:
+  commands:
+    name: linux_commands
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Command
+        run: echo "Hello Santhosh"
+        shell: bash
+      - name: List Command
+        shell: bash
+        run: ls -a
